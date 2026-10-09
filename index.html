@@ -290,14 +290,33 @@
             font-weight: 700;
         }
 
+        .video-card {
+            width: 100%;
+        }
+
+        .video-toolbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 9px;
+            padding: 10px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-bottom: 0;
+            border-radius: 14px 14px 0 0;
+        }
+
         .video-container {
             width: 100%;
             aspect-ratio: 16 / 9;
             max-height: 420px;
-            border-radius: 14px;
+            border-radius: 0 0 14px 14px;
             overflow: hidden;
             border: 1px solid var(--card-border);
-            margin-top: 10px;
+            border-top: 0;
+            margin-top: 0;
             background: #000;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             display: flex;
@@ -339,10 +358,12 @@
         }
 
         .video-label {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            z-index: 5;
+            position: static;
+            display: inline-flex;
+            align-items: center;
+            max-width: 100%;
+            white-space: normal;
+            line-height: 1.5;
             padding: 7px 11px;
             border: 1px solid var(--accent-cyan);
             border-radius: 999px;
@@ -355,10 +376,13 @@
         }
 
         .sound-toggle {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            z-index: 5;
+            position: static;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            max-width: 100%;
+            line-height: 1.5;
             border: 1px solid var(--accent-cyan);
             border-radius: 999px;
             padding: 9px 14px;
@@ -369,6 +393,17 @@
             cursor: pointer;
             box-shadow: 0 0 14px rgba(0, 242, 254, 0.45);
             backdrop-filter: blur(8px);
+        }
+
+        @media (max-width: 390px) {
+            .video-toolbar {
+                padding: 8px;
+                gap: 6px;
+            }
+            .video-label, .sound-toggle {
+                padding: 7px 8px;
+                font-size: 11px;
+            }
         }
 
         .footer {
@@ -441,6 +476,7 @@
             <div class="sub-options">
                 <a href="https://wa.me/9647708625311" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
                 <a href="https://wa.me/9647737506060" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="https://wa.me/9647735506060" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i><strong class="contact-number">07735506060</strong></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -455,6 +491,7 @@
             <div class="sub-options">
                 <a href="tel:+9647708625311" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
                 <a href="tel:+9647737506060" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="tel:+9647735506060" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i><strong class="contact-number">07735506060</strong></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -469,6 +506,7 @@
             <div class="sub-options">
                 <a href="viber://chat?number=%2B9647708625311" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
                 <a href="viber://chat?number=%2B9647737506060" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="viber://chat?number=%2B9647735506060" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i><strong class="contact-number">07735506060</strong></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -483,6 +521,7 @@
             <div class="sub-options">
                 <a href="https://t.me/+9647708625311" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-telegram" style="color: #29a9e1;"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
                 <a href="https://t.me/+9647737506060" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-telegram" style="color: #29a9e1;"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="https://t.me/+9647735506060" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-telegram" style="color: #29a9e1;"></i><strong class="contact-number">07735506060</strong></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -506,25 +545,33 @@
             </div>
         </div>
 
-        <div class="video-container">
-            <span class="video-label" data-key="branch1_video">ڤیدیۆی لقی یەک</span>
+        <div class="video-card">
+            <div class="video-toolbar">
+                <span class="video-label" data-key="branch1_video">ڤیدیۆی لقی یەک</span>
+                <button type="button" class="sound-toggle" id="soundToggle1" aria-label="Toggle Branch 1 video sound">🔇 <span class="sound-label">چالاککردنی دەنگ</span></button>
+            </div>
+            <div class="video-container">
             <video id="promoVideo1" class="promo-video" autoplay muted loop playsinline controls preload="metadata">
                 <source src="video-branch1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <button type="button" class="sound-toggle" id="soundToggle1" aria-label="Toggle Branch 1 video sound">🔇 <span class="sound-label">چالاککردنی دەنگ</span></button>
+            </div>
         </div>
 
-        <div class="video-container branch-two-video">
+        <div class="video-card">
+            <div class="video-toolbar">
+                <span class="video-label" data-key="branch2_video">ڤیدیۆی لقی دوو</span>
+                <button type="button" class="sound-toggle" id="soundToggle2" aria-label="Toggle Branch 2 video sound">🔇 <span class="sound-label">چالاککردنی دەنگ</span></button>
+            </div>
+            <div class="video-container branch-two-video">
             <video class="video-backdrop" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
                 <source src="video.mp4" type="video/mp4">
             </video>
-            <span class="video-label" data-key="branch2_video">ڤیدیۆی لقی دوو</span>
             <video id="promoVideo2" class="promo-video" autoplay muted loop playsinline controls preload="metadata">
                 <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <button type="button" class="sound-toggle" id="soundToggle2" aria-label="Toggle Branch 2 video sound">🔇 <span class="sound-label">چالاککردنی دەنگ</span></button>
+            </div>
         </div>
 
         <div class="footer">
