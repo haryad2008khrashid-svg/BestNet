@@ -271,9 +271,28 @@
             gap: 10px;
         }
 
+        .sub-btn span.contact-copy {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+        }
+
+        .branch-label {
+            color: var(--text-muted);
+            font-size: 12px;
+            line-height: 1.25;
+        }
+
+        .contact-number {
+            direction: ltr;
+            unicode-bidi: isolate;
+            font-weight: 700;
+        }
+
         .video-container {
             width: 100%;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 16 / 9;
             max-height: 420px;
             border-radius: 14px;
             overflow: hidden;
@@ -290,7 +309,23 @@
         .video-container video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+
+        .video-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 5;
+            padding: 7px 11px;
+            border: 1px solid var(--accent-cyan);
+            border-radius: 999px;
+            color: #fff;
+            background: rgba(3, 27, 40, 0.88);
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 0 14px rgba(0, 242, 254, 0.3);
+            backdrop-filter: blur(8px);
         }
 
         .sound-toggle {
@@ -378,8 +413,8 @@
                 <i class="fa-solid fa-chevron-down arrow-icon"></i>
             </div>
             <div class="sub-options">
-                <a href="https://wa.me/9647735506060" target="_blank" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> 0773 550 60 60</span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
-                <a href="https://wa.me/9647737506060" target="_blank" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> 0773 750 60 60</span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="https://wa.me/9647708625311" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="https://wa.me/9647737506060" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -392,8 +427,8 @@
                 <i class="fa-solid fa-chevron-down arrow-icon"></i>
             </div>
             <div class="sub-options">
-                <a href="tel:07735506060" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i> 0773 550 60 60</span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
-                <a href="tel:07737506060" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i> 0773 750 60 60</span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="tel:+9647708625311" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="tel:+9647737506060" class="sub-btn"><span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -406,8 +441,22 @@
                 <i class="fa-solid fa-chevron-down arrow-icon"></i>
             </div>
             <div class="sub-options">
-                <a href="viber://chat?number=%2B9647735506060" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i> 0773 550 60 60</span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
-                <a href="viber://chat?number=%2B9647737506060" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i> 0773 750 60 60</span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="viber://chat?number=%2B9647708625311" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="viber://chat?number=%2B9647737506060" class="sub-btn"><span><i class="fa-brands fa-viber" style="color: #7360f2;"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+            </div>
+        </div>
+
+        <div class="link-card" onclick="toggleCard(this)">
+            <div class="link-header">
+                <div class="link-info">
+                    <i class="fa-brands fa-telegram" style="color: #29a9e1;"></i>
+                    <span class="link-title" data-key="telegram_title">تێلەگرام</span>
+                </div>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+            </div>
+            <div class="sub-options">
+                <a href="https://t.me/+9647708625311" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-telegram" style="color: #29a9e1;"></i><span class="contact-copy"><small class="branch-label" data-key="branch1_label">لقی یەک</small><strong class="contact-number">0770 862 5311</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
+                <a href="https://t.me/+9647737506060" target="_blank" rel="noopener noreferrer" class="sub-btn"><span><i class="fa-brands fa-telegram" style="color: #29a9e1;"></i><span class="contact-copy"><small class="branch-label" data-key="branch2_label">لقی دوو</small><strong class="contact-number">0773 750 60 60</strong></span></span> <i class="fa-solid fa-angle-left" style="direction: rtl;"></i></a>
             </div>
         </div>
 
@@ -432,11 +481,21 @@
         </div>
 
         <div class="video-container">
-            <video id="promoVideo" autoplay muted loop playsinline controls>
+            <span class="video-label" data-key="branch1_video">ڤیدیۆی لقی یەک</span>
+            <video id="promoVideo1" class="promo-video" autoplay muted loop playsinline controls preload="metadata">
+                <source src="video-branch1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button type="button" class="sound-toggle" id="soundToggle1" aria-label="Toggle Branch 1 video sound">🔇 <span class="sound-label">چالاککردنی دەنگ</span></button>
+        </div>
+
+        <div class="video-container">
+            <span class="video-label" data-key="branch2_video">ڤیدیۆی لقی دوو</span>
+            <video id="promoVideo2" class="promo-video" autoplay muted loop playsinline controls preload="metadata">
                 <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <button type="button" class="sound-toggle" id="soundToggle" aria-label="Toggle video sound">🔇 چالاککردنی دەنگ</button>
+            <button type="button" class="sound-toggle" id="soundToggle2" aria-label="Toggle Branch 2 video sound">🔇 <span class="sound-label">چالاککردنی دەنگ</span></button>
         </div>
 
         <div class="footer">
@@ -453,46 +512,6 @@
                 card.classList.add('active');
             }
         }
-
-        const promoVideo = document.getElementById('promoVideo');
-        const soundToggle = document.getElementById('soundToggle');
-
-        function updateSoundButton() {
-            soundToggle.textContent = promoVideo.muted ? '🔇 چالاککردنی دەنگ' : '🔊 داخستنی دەنگ';
-        }
-
-        function enableVideoSound() {
-            promoVideo.muted = false;
-            promoVideo.volume = 0.85;
-            const playAttempt = promoVideo.play();
-            updateSoundButton();
-            if (playAttempt && typeof playAttempt.catch === 'function') {
-                playAttempt.catch(() => {
-                    promoVideo.muted = true;
-                    updateSoundButton();
-                });
-            }
-        }
-
-        soundToggle.addEventListener('click', function(event) {
-            event.stopPropagation();
-            if (promoVideo.muted) {
-                enableVideoSound();
-            } else {
-                promoVideo.muted = true;
-                updateSoundButton();
-            }
-        });
-
-        function unlockSoundOnFirstTouch(event) {
-            if (event.target.closest('#soundToggle')) return;
-            enableVideoSound();
-            document.removeEventListener('pointerdown', unlockSoundOnFirstTouch, true);
-        }
-
-        document.addEventListener('pointerdown', unlockSoundOnFirstTouch, true);
-        promoVideo.addEventListener('volumechange', updateSoundButton);
-        updateSoundButton();
 
         const bg = document.getElementById('spaceBg');
         for (let i = 0; i < 60; i++) {
@@ -523,6 +542,13 @@
                 phone_title: "پەیوەندی تەلەفۆنی",
                 whatsapp_title: "واتسئەپ",
                 viber_title: "ڤایبەر",
+                telegram_title: "تێلەگرام",
+                branch1_label: "لقی یەک",
+                branch2_label: "لقی دوو",
+                branch1_video: "ڤیدیۆی لقی یەک",
+                branch2_video: "ڤیدیۆی لقی دوو",
+                sound_on: "چالاککردنی دەنگ",
+                sound_off: "داخستنی دەنگ",
                 tiktok_title: "پەیجی تیکتۆک",
                 fb_title: "پەیجی فەیسبووک",
                 instagram_title: "پەیجی ئینستاگرام",
@@ -535,6 +561,13 @@
                 phone_title: "الاتصال الهاتفي",
                 whatsapp_title: "واتساب",
                 viber_title: "فايبر",
+                telegram_title: "تيليجرام",
+                branch1_label: "الفرع الأول",
+                branch2_label: "الفرع الثاني",
+                branch1_video: "فيديو الفرع الأول",
+                branch2_video: "فيديو الفرع الثاني",
+                sound_on: "تشغيل الصوت",
+                sound_off: "كتم الصوت",
                 tiktok_title: "صفحة تيك توك",
                 fb_title: "صفحة الفيسبوك",
                 instagram_title: "صفحة إنستغرام",
@@ -547,6 +580,13 @@
                 phone_title: "Phone Call",
                 whatsapp_title: "WhatsApp",
                 viber_title: "Viber",
+                telegram_title: "Telegram",
+                branch1_label: "Branch 1",
+                branch2_label: "Branch 2",
+                branch1_video: "Branch 1 video",
+                branch2_video: "Branch 2 video",
+                sound_on: "Turn sound on",
+                sound_off: "Mute sound",
                 tiktok_title: "TikTok Page",
                 fb_title: "Facebook Page",
                 instagram_title: "Instagram Page",
@@ -555,6 +595,53 @@
                 branch2: "Branch 2: Sulaymaniyah - Kawa Road before the cigarette market"
             }
         };
+
+        const videoSoundPlayers = [
+            { video: document.getElementById('promoVideo1'), button: document.getElementById('soundToggle1') },
+            { video: document.getElementById('promoVideo2'), button: document.getElementById('soundToggle2') }
+        ];
+
+        function updateSoundButtons() {
+            const lang = document.documentElement.getAttribute('lang') || 'ku';
+            videoSoundPlayers.forEach(player => {
+                const key = player.video.muted ? 'sound_on' : 'sound_off';
+                const label = translations[lang][key];
+                const icon = player.video.muted ? '🔇 ' : '🔊 ';
+                player.button.querySelector('.sound-label').textContent = label;
+                player.button.firstChild.textContent = icon;
+            });
+        }
+
+        videoSoundPlayers.forEach(player => {
+            player.button.addEventListener('click', function(event) {
+                event.stopPropagation();
+                player.video.muted = !player.video.muted;
+                if (!player.video.muted) player.video.volume = 0.85;
+                const attempt = player.video.play();
+                if (attempt && typeof attempt.catch === 'function') {
+                    attempt.catch(() => {
+                        player.video.muted = true;
+                        updateSoundButtons();
+                    });
+                }
+                updateSoundButtons();
+            });
+            player.video.addEventListener('volumechange', updateSoundButtons);
+        });
+        updateSoundButtons();
+
+        if ('IntersectionObserver' in window) {
+            const videoObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.play().catch(() => {});
+                    } else {
+                        entry.target.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+            document.querySelectorAll('.promo-video').forEach(video => videoObserver.observe(video));
+        }
 
         function setLanguage(lang, e) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
@@ -575,6 +662,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
+            updateSoundButtons();
         }
     </script>
 </body>
