@@ -313,12 +313,29 @@
         }
 
         .video-container.branch-two-video {
-            aspect-ratio: auto;
-            max-height: none;
+            isolation: isolate;
         }
 
-        .video-container.branch-two-video video {
-            height: auto;
+        .video-container.branch-two-video .video-backdrop {
+            position: absolute;
+            inset: -14px;
+            width: calc(100% + 28px);
+            height: calc(100% + 28px);
+            object-fit: cover;
+            filter: blur(18px) brightness(0.55) saturate(1.15);
+            transform: scale(1.08);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .video-container.branch-two-video #promoVideo2 {
+            position: relative;
+            z-index: 1;
+            width: auto;
+            max-width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: transparent;
         }
 
         .video-label {
@@ -499,6 +516,9 @@
         </div>
 
         <div class="video-container branch-two-video">
+            <video class="video-backdrop" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+                <source src="video.mp4" type="video/mp4">
+            </video>
             <span class="video-label" data-key="branch2_video">ڤیدیۆی لقی دوو</span>
             <video id="promoVideo2" class="promo-video" autoplay muted loop playsinline controls preload="metadata">
                 <source src="video.mp4" type="video/mp4">
@@ -649,7 +669,7 @@
                     }
                 });
             }, { threshold: 0.5 });
-            document.querySelectorAll('.promo-video').forEach(video => videoObserver.observe(video));
+            document.querySelectorAll('.promo-video, .video-backdrop').forEach(video => videoObserver.observe(video));
         }
 
         function setLanguage(lang, e) {
